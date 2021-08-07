@@ -238,3 +238,24 @@ partial class SandboxPlayer : Player
 	//	return base.HasPermission( mode );
 	//	}
 }
+
+public static class TestEvent
+{
+	[Event("test")]
+	public static void testNoArgs()
+	{
+		Log.Info( "Works fine" );
+	}
+	
+	[Event("test")]
+	public static void testArg(int args)
+	{
+		Log.Info( "broken" );
+	}	
+	
+	[Event("tests")]
+	public static void testArgs(int args)
+	{
+		Log.Info( "broken" );
+	}
+}
