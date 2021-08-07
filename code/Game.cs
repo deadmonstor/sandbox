@@ -98,8 +98,8 @@ partial class SandboxGame : Game
 	[ServerCmd( "testevents" )]
 	public static void TestCommand()
 	{
-		Event.Run( "test" );
 		Event.Run( "tests", 1 ); // Does nothing
-		Event.Run( "test", 1 ); // Error
+		Event.Run( "test", 1 ); // Does nothing
+		Event.Run( "test" ); // Error but works? 
 	}
 }
